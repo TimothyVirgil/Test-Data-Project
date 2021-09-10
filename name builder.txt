@@ -1,0 +1,1776 @@
+Python 3.9.6 (tags/v3.9.6:db3ff76, Jun 28 2021, 15:26:21) [MSC v.1929 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+>>> set wd
+SyntaxError: invalid syntax
+>>> osgetcwd()
+Traceback (most recent call last):
+  File "<pyshell#1>", line 1, in <module>
+    osgetcwd()
+NameError: name 'osgetcwd' is not defined
+>>> os.getwcd()
+Traceback (most recent call last):
+  File "<pyshell#2>", line 1, in <module>
+    os.getwcd()
+NameError: name 'os' is not defined
+>>> import os
+>>> os.getcwd()
+'C:\\Users\\cabba\\AppData\\Local\\Programs\\Python\\Python39'
+>>> os.chdir(r'C:\Users
+	 
+SyntaxError: EOL while scanning string literal
+>>> os.chdir(r'C:\Users\cabba\OneDrive\Programs\Test Analysis Project')
+>>> file.open(names.txt)
+Traceback (most recent call last):
+  File "<pyshell#7>", line 1, in <module>
+    file.open(names.txt)
+NameError: name 'file' is not defined
+>>> read.file(names.txt)
+Traceback (most recent call last):
+  File "<pyshell#8>", line 1, in <module>
+    read.file(names.txt)
+NameError: name 'read' is not defined
+>>> open(names.txt, 'r')
+Traceback (most recent call last):
+  File "<pyshell#9>", line 1, in <module>
+    open(names.txt, 'r')
+NameError: name 'names' is not defined
+>>> open('names.txt', 'r')
+<_io.TextIOWrapper name='names.txt' mode='r' encoding='cp1252'>
+>>> with open('names.txt', 'r') as a:
+	names = a.read()
+	print(names)
+
+	
+Fallon Rohn Â 
+Ashleigh Maines Â 
+Necole Bischoff Â 
+Ammie Wheeling Â 
+Nathaniel Orenstein Â 
+Cassaundra Lettieri Â 
+Darcy Fong Â 
+Arturo Butts Â 
+Scott Seay Â 
+Else Beech Â 
+Yvonne Fairbanks Â 
+Craig Seago Â 
+Glen Wollman Â 
+Elnora Weldy Â 
+Isabella Guillermo Â 
+Deidre Sensabaugh Â 
+Chong Sagers Â 
+Myrl Langone Â 
+Ethyl Paulos Â 
+Pricilla Arteaga
+>>> a.readlines()
+Traceback (most recent call last):
+  File "<pyshell#15>", line 1, in <module>
+    a.readlines()
+ValueError: I/O operation on closed file.
+>>> with open('names.txt' , 'r') as b:
+	b.readlines()
+
+	
+['Fallon Rohn Â\xa0\n', 'Ashleigh Maines Â\xa0\n', 'Necole Bischoff Â\xa0\n', 'Ammie Wheeling Â\xa0\n', 'Nathaniel Orenstein Â\xa0\n', 'Cassaundra Lettieri Â\xa0\n', 'Darcy Fong Â\xa0\n', 'Arturo Butts Â\xa0\n', 'Scott Seay Â\xa0\n', 'Else Beech Â\xa0\n', 'Yvonne Fairbanks Â\xa0\n', 'Craig Seago Â\xa0\n', 'Glen Wollman Â\xa0\n', 'Elnora Weldy Â\xa0\n', 'Isabella Guillermo Â\xa0\n', 'Deidre Sensabaugh Â\xa0\n', 'Chong Sagers Â\xa0\n', 'Myrl Langone Â\xa0\n', 'Ethyl Paulos Â\xa0\n', 'Pricilla Arteaga']
+>>> first_names = []
+>>> last_names = []
+>>> with open('names.txt', 'r') as c:
+	names = c.read()
+	for x in names:
+		if x == 'A':
+			print('I found an A!')
+
+			
+I found an A!
+I found an A!
+I found an A!
+I found an A!
+>>> full_names = []
+>>> with open('names.txt', 'r') as d:
+	lines = d.readlines()
+	for x in lines:
+		full_names += x[:-4]
+
+		
+>>> print(full_names)
+['F', 'a', 'l', 'l', 'o', 'n', ' ', 'R', 'o', 'h', 'n', 'A', 's', 'h', 'l', 'e', 'i', 'g', 'h', ' ', 'M', 'a', 'i', 'n', 'e', 's', 'N', 'e', 'c', 'o', 'l', 'e', ' ', 'B', 'i', 's', 'c', 'h', 'o', 'f', 'f', 'A', 'm', 'm', 'i', 'e', ' ', 'W', 'h', 'e', 'e', 'l', 'i', 'n', 'g', 'N', 'a', 't', 'h', 'a', 'n', 'i', 'e', 'l', ' ', 'O', 'r', 'e', 'n', 's', 't', 'e', 'i', 'n', 'C', 'a', 's', 's', 'a', 'u', 'n', 'd', 'r', 'a', ' ', 'L', 'e', 't', 't', 'i', 'e', 'r', 'i', 'D', 'a', 'r', 'c', 'y', ' ', 'F', 'o', 'n', 'g', 'A', 'r', 't', 'u', 'r', 'o', ' ', 'B', 'u', 't', 't', 's', 'S', 'c', 'o', 't', 't', ' ', 'S', 'e', 'a', 'y', 'E', 'l', 's', 'e', ' ', 'B', 'e', 'e', 'c', 'h', 'Y', 'v', 'o', 'n', 'n', 'e', ' ', 'F', 'a', 'i', 'r', 'b', 'a', 'n', 'k', 's', 'C', 'r', 'a', 'i', 'g', ' ', 'S', 'e', 'a', 'g', 'o', 'G', 'l', 'e', 'n', ' ', 'W', 'o', 'l', 'l', 'm', 'a', 'n', 'E', 'l', 'n', 'o', 'r', 'a', ' ', 'W', 'e', 'l', 'd', 'y', 'I', 's', 'a', 'b', 'e', 'l', 'l', 'a', ' ', 'G', 'u', 'i', 'l', 'l', 'e', 'r', 'm', 'o', 'D', 'e', 'i', 'd', 'r', 'e', ' ', 'S', 'e', 'n', 's', 'a', 'b', 'a', 'u', 'g', 'h', 'C', 'h', 'o', 'n', 'g', ' ', 'S', 'a', 'g', 'e', 'r', 's', 'M', 'y', 'r', 'l', ' ', 'L', 'a', 'n', 'g', 'o', 'n', 'e', 'E', 't', 'h', 'y', 'l', ' ', 'P', 'a', 'u', 'l', 'o', 's', 'P', 'r', 'i', 'c', 'i', 'l', 'l', 'a', ' ', 'A', 'r', 't']
+>>> full_names = []
+>>> full_names
+[]
+>>> with open('names.txt', 'r') as e:
+	lines = e.readlines()
+	for x in lines:
+		full_names += [x[:4]]
+
+		
+>>> print(full_names)
+['Fall', 'Ashl', 'Neco', 'Ammi', 'Nath', 'Cass', 'Darc', 'Artu', 'Scot', 'Else', 'Yvon', 'Crai', 'Glen', 'Elno', 'Isab', 'Deid', 'Chon', 'Myrl', 'Ethy', 'Pric']
+>>> full_names = []
+>>> with open('names.txt', 'r') as f:
+	lines = f.readlines
+	for x in lines:
+		full_names += [x[:-4]]
+
+		
+Traceback (most recent call last):
+  File "<pyshell#47>", line 3, in <module>
+    for x in lines:
+TypeError: 'builtin_function_or_method' object is not iterable
+>>> with open('names.txt', 'r') as g:
+	lines = g.readlines()
+	for x in lines:
+		full_names += [x[:-4]]
+
+		
+>>> print(full_names)
+['Fallon Rohn', 'Ashleigh Maines', 'Necole Bischoff', 'Ammie Wheeling', 'Nathaniel Orenstein', 'Cassaundra Lettieri', 'Darcy Fong', 'Arturo Butts', 'Scott Seay', 'Else Beech', 'Yvonne Fairbanks', 'Craig Seago', 'Glen Wollman', 'Elnora Weldy', 'Isabella Guillermo', 'Deidre Sensabaugh', 'Chong Sagers', 'Myrl Langone', 'Ethyl Paulos', 'Pricilla Art']
+>>> for x in full_names:
+	first_name = ''
+	last_name = ''
+	name_list = 0
+	for a in x:
+		while name_list = 0:
+			
+SyntaxError: invalid syntax
+>>> for x in full_names:
+	first_name = ''
+	last_name = ''
+	name_list = 0
+	for a in x:
+		while name_list == 0:
+			if a == ' ':
+				first_names += [first_name]
+				name_list = 1
+			first_name += a
+		last_name += a
+	else:
+		last_names += [last_name]
+
+		
+Traceback (most recent call last):
+  File "<pyshell#62>", line 10, in <module>
+    first_name += a
+KeyboardInterrupt
+>>> for x in full_names:
+	first_name = ''
+	last_name = ''
+	name_list == 'first'
+	for a in x:
+		if a == ' ':
+			first_names += [first_name]
+			name_list == 'last'
+			continue
+		elif name_list == 'first':			
+			first_name += a
+		elif name_list == 'last':
+			last_name += a
+	else:
+		last_names += [last_name]
+
+		
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+>>> print(last_names)
+['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+>>> print(full_names)
+['Fallon Rohn', 'Ashleigh Maines', 'Necole Bischoff', 'Ammie Wheeling', 'Nathaniel Orenstein', 'Cassaundra Lettieri', 'Darcy Fong', 'Arturo Butts', 'Scott Seay', 'Else Beech', 'Yvonne Fairbanks', 'Craig Seago', 'Glen Wollman', 'Elnora Weldy', 'Isabella Guillermo', 'Deidre Sensabaugh', 'Chong Sagers', 'Myrl Langone', 'Ethyl Paulos', 'Pricilla Art']
+>>> print(first_names)
+['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+>>> for x in full_names:
+	first_name = ''
+	last_name = ''
+	name_list == 'first'
+	for a in x:
+		if a == ' ':
+			first_names += [first_name]
+			name_list == 'last'
+			continue
+		elif name_list == 'first':			
+			first_name += a
+			print(a)
+		elif name_list == 'last':
+			last_name += a
+	else:
+		last_names += [last_name]
+
+		
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+False
+>>> for x in full_names:
+	first_name = ''
+	last_name = ''
+	name_list == 'first'
+	for a in x:
+		print(a)
+		if a == ' ':
+			first_names += [first_name]
+			name_list == 'last'
+			continue
+		elif name_list == 'first':			
+			first_name += a
+			print(a)
+		elif name_list == 'last':
+			last_name += a
+	else:
+		last_names += [last_name]
+
+
+False
+F
+a
+l
+l
+o
+n
+ 
+False
+R
+o
+h
+n
+False
+A
+s
+h
+l
+e
+i
+g
+h
+ 
+False
+M
+a
+i
+n
+e
+s
+False
+N
+e
+c
+o
+l
+e
+ 
+False
+B
+i
+s
+c
+h
+o
+f
+f
+False
+A
+m
+m
+i
+e
+ 
+False
+W
+h
+e
+e
+l
+i
+n
+g
+False
+N
+a
+t
+h
+a
+n
+i
+e
+l
+ 
+False
+O
+r
+e
+n
+s
+t
+e
+i
+n
+False
+C
+a
+s
+s
+a
+u
+n
+d
+r
+a
+ 
+False
+L
+e
+t
+t
+i
+e
+r
+i
+False
+D
+a
+r
+c
+y
+ 
+False
+F
+o
+n
+g
+False
+A
+r
+t
+u
+r
+o
+ 
+False
+B
+u
+t
+t
+s
+False
+S
+c
+o
+t
+t
+ 
+False
+S
+e
+a
+y
+False
+E
+l
+s
+e
+ 
+False
+B
+e
+e
+c
+h
+False
+Y
+v
+o
+n
+n
+e
+ 
+False
+F
+a
+i
+r
+b
+a
+n
+k
+s
+False
+C
+r
+a
+i
+g
+ 
+False
+S
+e
+a
+g
+o
+False
+G
+l
+e
+n
+ 
+False
+W
+o
+l
+l
+m
+a
+n
+False
+E
+l
+n
+o
+r
+a
+ 
+False
+W
+e
+l
+d
+y
+False
+I
+s
+a
+b
+e
+l
+l
+a
+ 
+False
+G
+u
+i
+l
+l
+e
+r
+m
+o
+False
+D
+e
+i
+d
+r
+e
+ 
+False
+S
+e
+n
+s
+a
+b
+a
+u
+g
+h
+False
+C
+h
+o
+n
+g
+ 
+False
+S
+a
+g
+e
+r
+s
+False
+M
+y
+r
+l
+ 
+False
+L
+a
+n
+g
+o
+n
+e
+False
+E
+t
+h
+y
+l
+ 
+False
+P
+a
+u
+l
+o
+s
+False
+P
+r
+i
+c
+i
+l
+l
+a
+ 
+False
+A
+r
+t
+>>> for x in full_names:
+	first_name = ''
+	last_name = ''
+	name_list = 'first'
+	for a in x:
+		print(a)
+		if a == ' ':
+			first_names += [first_name]
+			name_list == 'last'
+			continue
+		elif name_list == 'first':			
+			first_name += a
+			print(a)
+		elif name_list == 'last':
+			last_name += a
+	else:
+		last_names += [last_name]
+
+		
+F
+F
+a
+a
+l
+l
+l
+l
+o
+o
+n
+n
+ 
+False
+R
+R
+o
+o
+h
+h
+n
+n
+A
+A
+s
+s
+h
+h
+l
+l
+e
+e
+i
+i
+g
+g
+h
+h
+ 
+False
+M
+M
+a
+a
+i
+i
+n
+n
+e
+e
+s
+s
+N
+N
+e
+e
+c
+c
+o
+o
+l
+l
+e
+e
+ 
+False
+B
+B
+i
+i
+s
+s
+c
+c
+h
+h
+o
+o
+f
+f
+f
+f
+A
+A
+m
+m
+m
+m
+i
+i
+e
+e
+ 
+False
+W
+W
+h
+h
+e
+e
+e
+e
+l
+l
+i
+i
+n
+n
+g
+g
+N
+N
+a
+a
+t
+t
+h
+h
+a
+a
+n
+n
+i
+i
+e
+e
+l
+l
+ 
+False
+O
+O
+r
+r
+e
+e
+n
+n
+s
+s
+t
+t
+e
+e
+i
+i
+n
+n
+C
+C
+a
+a
+s
+s
+s
+s
+a
+a
+u
+u
+n
+n
+d
+d
+r
+r
+a
+a
+ 
+False
+L
+L
+e
+e
+t
+t
+t
+t
+i
+i
+e
+e
+r
+r
+i
+i
+D
+D
+a
+a
+r
+r
+c
+c
+y
+y
+ 
+False
+F
+F
+o
+o
+n
+n
+g
+g
+A
+A
+r
+r
+t
+t
+u
+u
+r
+r
+o
+o
+ 
+False
+B
+B
+u
+u
+t
+t
+t
+t
+s
+s
+S
+S
+c
+c
+o
+o
+t
+t
+t
+t
+ 
+False
+S
+S
+e
+e
+a
+a
+y
+y
+E
+E
+l
+l
+s
+s
+e
+e
+ 
+False
+B
+B
+e
+e
+e
+e
+c
+c
+h
+h
+Y
+Y
+v
+v
+o
+o
+n
+n
+n
+n
+e
+e
+ 
+False
+F
+F
+a
+a
+i
+i
+r
+r
+b
+b
+a
+a
+n
+n
+k
+k
+s
+s
+C
+C
+r
+r
+a
+a
+i
+i
+g
+g
+ 
+False
+S
+S
+e
+e
+a
+a
+g
+g
+o
+o
+G
+G
+l
+l
+e
+e
+n
+n
+ 
+False
+W
+W
+o
+o
+l
+l
+l
+l
+m
+m
+a
+a
+n
+n
+E
+E
+l
+l
+n
+n
+o
+o
+r
+r
+a
+a
+ 
+False
+W
+W
+e
+e
+l
+l
+d
+d
+y
+y
+I
+I
+s
+s
+a
+a
+b
+b
+e
+e
+l
+l
+l
+l
+a
+a
+ 
+False
+G
+G
+u
+u
+i
+i
+l
+l
+l
+l
+e
+e
+r
+r
+m
+m
+o
+o
+D
+D
+e
+e
+i
+i
+d
+d
+r
+r
+e
+e
+ 
+False
+S
+S
+e
+e
+n
+n
+s
+s
+a
+a
+b
+b
+a
+a
+u
+u
+g
+g
+h
+h
+C
+C
+h
+h
+o
+o
+n
+n
+g
+g
+ 
+False
+S
+S
+a
+a
+g
+g
+e
+e
+r
+r
+s
+s
+M
+M
+y
+y
+r
+r
+l
+l
+ 
+False
+L
+L
+a
+a
+n
+n
+g
+g
+o
+o
+n
+n
+e
+e
+E
+E
+t
+t
+h
+h
+y
+y
+l
+l
+ 
+False
+P
+P
+a
+a
+u
+u
+l
+l
+o
+o
+s
+s
+P
+P
+r
+r
+i
+i
+c
+c
+i
+i
+l
+l
+l
+l
+a
+a
+ 
+False
+A
+A
+r
+r
+t
+t
+>>> print(last_names)
+['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+>>> print(first_names)
+['', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', 'Fallon', 'Ashleigh', 'Necole', 'Ammie', 'Nathaniel', 'Cassaundra', 'Darcy', 'Arturo', 'Scott', 'Else', 'Yvonne', 'Craig', 'Glen', 'Elnora', 'Isabella', 'Deidre', 'Chong', 'Myrl', 'Ethyl', 'Pricilla']
+>>> first_names = []
+>>> last_names = []
+>>> for x in full_names:
+	first_name = ''
+	last_name = ''
+	name_list == 'first'
+	for a in x:
+		print(a)
+		if a == ' ':
+			first_names += [first_name]
+			name_list = 'last'
+			continue
+		elif name_list == 'first':			
+			first_name += a
+			print(a)
+		elif name_list == 'last':
+			last_name += a
+	else:
+		last_names += [last_name]
+
+		
+True
+F
+F
+a
+a
+l
+l
+l
+l
+o
+o
+n
+n
+ 
+R
+o
+h
+n
+False
+A
+s
+h
+l
+e
+i
+g
+h
+ 
+M
+a
+i
+n
+e
+s
+False
+N
+e
+c
+o
+l
+e
+ 
+B
+i
+s
+c
+h
+o
+f
+f
+False
+A
+m
+m
+i
+e
+ 
+W
+h
+e
+e
+l
+i
+n
+g
+False
+N
+a
+t
+h
+a
+n
+i
+e
+l
+ 
+O
+r
+e
+n
+s
+t
+e
+i
+n
+False
+C
+a
+s
+s
+a
+u
+n
+d
+r
+a
+ 
+L
+e
+t
+t
+i
+e
+r
+i
+False
+D
+a
+r
+c
+y
+ 
+F
+o
+n
+g
+False
+A
+r
+t
+u
+r
+o
+ 
+B
+u
+t
+t
+s
+False
+S
+c
+o
+t
+t
+ 
+S
+e
+a
+y
+False
+E
+l
+s
+e
+ 
+B
+e
+e
+c
+h
+False
+Y
+v
+o
+n
+n
+e
+ 
+F
+a
+i
+r
+b
+a
+n
+k
+s
+False
+C
+r
+a
+i
+g
+ 
+S
+e
+a
+g
+o
+False
+G
+l
+e
+n
+ 
+W
+o
+l
+l
+m
+a
+n
+False
+E
+l
+n
+o
+r
+a
+ 
+W
+e
+l
+d
+y
+False
+I
+s
+a
+b
+e
+l
+l
+a
+ 
+G
+u
+i
+l
+l
+e
+r
+m
+o
+False
+D
+e
+i
+d
+r
+e
+ 
+S
+e
+n
+s
+a
+b
+a
+u
+g
+h
+False
+C
+h
+o
+n
+g
+ 
+S
+a
+g
+e
+r
+s
+False
+M
+y
+r
+l
+ 
+L
+a
+n
+g
+o
+n
+e
+False
+E
+t
+h
+y
+l
+ 
+P
+a
+u
+l
+o
+s
+False
+P
+r
+i
+c
+i
+l
+l
+a
+ 
+A
+r
+t
+>>> print(first_names)
+['Fallon', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '']
+>>> print(last_names)
+['Rohn', 'AshleighMaines', 'NecoleBischoff', 'AmmieWheeling', 'NathanielOrenstein', 'CassaundraLettieri', 'DarcyFong', 'ArturoButts', 'ScottSeay', 'ElseBeech', 'YvonneFairbanks', 'CraigSeago', 'GlenWollman', 'ElnoraWeldy', 'IsabellaGuillermo', 'DeidreSensabaugh', 'ChongSagers', 'MyrlLangone', 'EthylPaulos', 'PricillaArt']
+>>> first_names = []
+>>> last_names = []
+>>> for x in full_names:
+	first_name = ''
+	last_name = ''
+	name_list = 'first'
+	for a in x:
+		print(a)
+		if a == ' ':
+			first_names += [first_name]
+			name_list = 'last'
+			continue
+		elif name_list == 'first':			
+			first_name += a
+		elif name_list == 'last':
+			last_name += a
+	else:
+		last_names += [last_name]
+
+		
+F
+a
+l
+l
+o
+n
+ 
+R
+o
+h
+n
+A
+s
+h
+l
+e
+i
+g
+h
+ 
+M
+a
+i
+n
+e
+s
+N
+e
+c
+o
+l
+e
+ 
+B
+i
+s
+c
+h
+o
+f
+f
+A
+m
+m
+i
+e
+ 
+W
+h
+e
+e
+l
+i
+n
+g
+N
+a
+t
+h
+a
+n
+i
+e
+l
+ 
+O
+r
+e
+n
+s
+t
+e
+i
+n
+C
+a
+s
+s
+a
+u
+n
+d
+r
+a
+ 
+L
+e
+t
+t
+i
+e
+r
+i
+D
+a
+r
+c
+y
+ 
+F
+o
+n
+g
+A
+r
+t
+u
+r
+o
+ 
+B
+u
+t
+t
+s
+S
+c
+o
+t
+t
+ 
+S
+e
+a
+y
+E
+l
+s
+e
+ 
+B
+e
+e
+c
+h
+Y
+v
+o
+n
+n
+e
+ 
+F
+a
+i
+r
+b
+a
+n
+k
+s
+C
+r
+a
+i
+g
+ 
+S
+e
+a
+g
+o
+G
+l
+e
+n
+ 
+W
+o
+l
+l
+m
+a
+n
+E
+l
+n
+o
+r
+a
+ 
+W
+e
+l
+d
+y
+I
+s
+a
+b
+e
+l
+l
+a
+ 
+G
+u
+i
+l
+l
+e
+r
+m
+o
+D
+e
+i
+d
+r
+e
+ 
+S
+e
+n
+s
+a
+b
+a
+u
+g
+h
+C
+h
+o
+n
+g
+ 
+S
+a
+g
+e
+r
+s
+M
+y
+r
+l
+ 
+L
+a
+n
+g
+o
+n
+e
+E
+t
+h
+y
+l
+ 
+P
+a
+u
+l
+o
+s
+P
+r
+i
+c
+i
+l
+l
+a
+ 
+A
+r
+t
+>>> print(first_names)
+['Fallon', 'Ashleigh', 'Necole', 'Ammie', 'Nathaniel', 'Cassaundra', 'Darcy', 'Arturo', 'Scott', 'Else', 'Yvonne', 'Craig', 'Glen', 'Elnora', 'Isabella', 'Deidre', 'Chong', 'Myrl', 'Ethyl', 'Pricilla']
+>>> print(last_names)
+['Rohn', 'Maines', 'Bischoff', 'Wheeling', 'Orenstein', 'Lettieri', 'Fong', 'Butts', 'Seay', 'Beech', 'Fairbanks', 'Seago', 'Wollman', 'Weldy', 'Guillermo', 'Sensabaugh', 'Sagers', 'Langone', 'Paulos', 'Art']
+>>> 

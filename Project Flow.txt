@@ -1,0 +1,7 @@
+1. Create and Import Student table - Student id, first name, lastname
+
+2. Create and Import Test table - test #'s, test name
+
+3. Create gradebook table - stud_id, test_scores - use pandas to capture stud_ids
+
+3. Create and Import Test Results table - test #, question #, id#, right or wrong

@@ -1,0 +1,18 @@
+Import Student Test Data :
+
+Export to CSV from online test data
+Import from csv to database with new test_id
+
+Create Sample Queries for teachers to use:
+
+	1. Top Scores on last test
+	2. Top Averages
+	3. Highest Increase
+	4. Lowest Scores
+Lowest Question Percentage
+
+student table
+
+test table
+
+individual tests with questions and standards table
